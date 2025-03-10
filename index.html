@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather Data Fetch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body id="vis">
+    <div class="main">
+        <div class="sub">
+        <div class="content">
+            <div class="imagechange">
+                <img id="head-img" src="">
+                <p id="des"></p>
+            </div>
+            <div class="temperature">
+                <h1>Temperature</h1>
+                <div class="temp1">
+                <h3 id="temp"></h3>
+                <h3>|</h3>
+                <h3 id="faren"></h3>
+            </div>
+            </div>
+           <div class="data">
+            
+            <p class="humidity"> Humidity :<span id="hum"> </span></p>
+            <p class="pressure">Pressure :<span id="press">  </span></p>
+            <p class="g_l">Ground_level :<span id="ground"> </span></p>
+            <p class="s_l">Sea level :<span id="sea"> </span></p>
+            </div>
+            <div class="wind1">
+                <h2>Wind </h2>
+                <p class="wind"> Speed :<span id="speed"> </span></p>
+                <p class="wind">Gust :<span id="gust"> </span></p>
+                <p class="wind">Deg :<span id="deg"> </span></p>
+
+
+            </div>
+        </div>
+        <div id="middle" class="mid">
+            <p> Enter the City :</p>
+            <input  id="get" type="text">
+            <button  class="city" onclick="fetchWeather()">Get Weather </button>
+        </div>
+        <div class="right">
+            <p>WEATHER</p>
+            <p id="day"></p>
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+    </div>
+    <div class="change">
+        <button class="prev" onclick="changedate('prev')">←</button>
+        <button class="next" onclick="changedate('next')">→</button>
+    </div>
+    
+    <div class="pictures">
+    
+    <script src="script.js"> </script>
+    <div class="canvas"><canvas id="myChart" style=></canvas></div>
+    <div class="cloud" id="scrollable">
+        <h2>Weather Forecast</h2>
+
+    </div>
+</div>
+</div>
+</body>
+</html>
