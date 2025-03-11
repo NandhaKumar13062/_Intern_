@@ -72,6 +72,7 @@ async function fetchWeather() {
         displayWeather(cur_index);
       }
   function displayWeather(index){
+    console.log("Canvas exists?", document.getElementById("myChart"));
     let i=1;
     let date=dateArray[index];
     let data=weatherdata[date];
@@ -96,10 +97,12 @@ async function fetchWeather() {
       canvas.width = parent.clientWidth;  
       canvas.height = parent.clientHeight; 
   }
+  console.log("Canvas exists?", document.getElementById("myChart"));
   
   resizeCanvas(); 
+  window.removeEventListener("resize", resizeCanvas);
   window.addEventListener("resize", resizeCanvas);
- 
+  console.log("Canvas exists?", document.getElementById("myChart"));
         myChart=new Chart(ctx, {
             type:"line",
             data: {
@@ -145,6 +148,7 @@ async function fetchWeather() {
             }  
           },
           }); 
+          console.log("Canvas exists?", document.getElementById("myChart"));
           cloud(index);  
 }
   
