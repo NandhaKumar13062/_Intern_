@@ -114,8 +114,8 @@ async function fetchWeather() {
               }]
             },
             options: {
-              responsive: false, 
-              maintainAspectRatio: false,
+              responsive: true, 
+              maintainAspectRatio: true,
               scales: {
                   x: {
                     display: false,

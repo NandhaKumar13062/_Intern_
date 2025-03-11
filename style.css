@@ -287,6 +287,7 @@ button:hover{
         max-width: 90vw; /* Prevents overflow */
         height: 30%;
         position: relative;
+        display: block;
     }
     .cloud{
         display: flex;
