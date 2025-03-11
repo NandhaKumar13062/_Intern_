@@ -4,13 +4,29 @@
     <title>Weather Data Fetch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="weather.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body id="vis">
     <div class="main">
         <div class="sub">
+            <div class="row1">
+                <div id="middle" class="mid">
+                    <p> Enter the City :</p>
+                    <input  id="get" type="text">
+                    <button  class="city" onclick="fetchWeather()">Get Weather </button>
+                </div>
+                <div class="right">
+                    <p>WEATHER</p>
+                    <p id="day"></p>
+                    <p id="date"></p>
+                    <p id="time"></p>
+                </div>
+            </div>
+            
         <div class="content">
+            <div class="row2">
             <div class="imagechange">
                 <img id="head-img" src="">
                 <p id="des"></p>
@@ -23,6 +39,8 @@
                 <h3 id="faren"></h3>
             </div>
             </div>
+        </div>
+        <div class="row3">
            <div class="data">
             
             <p class="humidity"> Humidity :<span id="hum"> </span></p>
@@ -39,17 +57,7 @@
 
             </div>
         </div>
-        <div id="middle" class="mid">
-            <p> Enter the City :</p>
-            <input  id="get" type="text">
-            <button  class="city" onclick="fetchWeather()">Get Weather </button>
-        </div>
-        <div class="right">
-            <p>WEATHER</p>
-            <p id="day"></p>
-            <p id="date"></p>
-            <p id="time"></p>
-        </div>
+    </div>
     </div>
     <div class="change">
         <button class="prev" onclick="changedate('prev')">←</button>

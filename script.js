@@ -1,3 +1,9 @@
+window.onload = function () {
+  if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      alert("For a better experience, please enable 'Desktop Site' mode in your browser.");
+  }
+};
+
 let lists=[];
 async function fetchWeather() {  
   const city=document.getElementById("get").value.trim();
@@ -25,7 +31,7 @@ async function fetchWeather() {
       mid.style.borderBottom="none";
       mid.style.top="0px";
       mid.style.left="0px";
-      mid.style.width="250px";
+      mid.style.width="60%";
       mid.style.height="140px";
       input.style.height="30px"
       input.style.width="250px"
