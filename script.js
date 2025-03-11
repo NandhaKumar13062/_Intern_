@@ -1,9 +1,3 @@
-window.onload = function () {
-  if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      alert("For a better experience, please enable 'Desktop Site' mode in your browser.");
-  }
-};
-
 let lists=[];
 async function fetchWeather() {  
   const city=document.getElementById("get").value.trim();
@@ -55,7 +49,6 @@ async function fetchWeather() {
   function dailyweather(){
     weatherdata={};
     timeObj={};
-    console.log(lists);
       lists.forEach(element => {
             if(element){
               let d=(element.dt_txt).slice(0,10);
@@ -82,7 +75,6 @@ async function fetchWeather() {
     let i=1;
     let date=dateArray[index];
     let data=weatherdata[date];
-    console.log(data)
     l1=[];
     l3=[];
     data.forEach(element=>{
@@ -142,6 +134,13 @@ async function fetchWeather() {
                 }
               },
               plugins: {
+                title: {
+                  display: true,
+                  text: 'Temperature Chart',
+                  font: {
+                      size: 10
+                  }
+              },
                 legend: { display: false },
                 tooltip: {
                 enabled: true,
