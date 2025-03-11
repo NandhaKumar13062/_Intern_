@@ -306,7 +306,7 @@ button:hover{
         justify-content: flex-start;
     }
     .canvas{
-        height: 25%;
+        min-height: 25%;
     }
     .timeslot{
         height: 50%;

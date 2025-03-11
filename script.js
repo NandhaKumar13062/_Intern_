@@ -141,16 +141,8 @@ async function fetchWeather() {
                       size: 10
                   }
               },
-                legend: { display: false },
-                tooltip: {
-                enabled: true,
-                callbacks: {
-                    label: function (tooltipItem) {
-                        return tooltipItem.raw + "°C"; // Show value on hover
-                    }
-                }
-            }
-               }
+                legend: { display: false }
+            }  
           },
           }); 
           cloud(index);  
